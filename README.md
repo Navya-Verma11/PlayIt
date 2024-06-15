@@ -1,4 +1,4 @@
-# PloadNPlay
+# PlayIt
 
 A project that allows user to upload media and stream that..
 
