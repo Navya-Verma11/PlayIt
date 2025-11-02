@@ -45,30 +45,54 @@ PlayIt is a media upload and streaming platform that enables users to upload, st
 ---
 
 ### Local Development
-
 #### Frontend
-
 cd frontend && npm install
 npm start
-
 text
-
 #### Backend
-
 cd backend && npm install
 npm start
-
 text
+---
+### Docker Deployment
+You can launch the entire application stack using Docker Compose:
+Create a `docker-compose.yml` file in your project root:
+version: '3'
+services:
+  frontend:
+    image: react-app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+    networks:
+      - ploadnplay-net
+  backend:
+    image: api-server
+    depends_on:
+      - mongodb
+    networks:
+      - ploadnplay-net
+  mongodb:
+    image: mongo
+    networks:
+      - ploadnplay-net
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+networks:
+  ploadnplay-net:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
+text
+To start all services:
+docker-compose up
+
 
 ---
-
-### Docker Deployment
-
-You can launch the entire application stack using Docker Compose:
-
-Create a `docker-compose.yml` file in your project root:
-
-
 ## Usage
 
 - Open [http://localhost:3000](http://localhost:3000) in your browser.
