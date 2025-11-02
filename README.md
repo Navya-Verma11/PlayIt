@@ -1,6 +1,6 @@
-# PlayIt
+# Ploadnplay
 
-PlayIt is a media upload and streaming platform that enables users to upload, store, and stream media files through an intuitive and modern web interface.
+Ploadnplay is a media upload and streaming platform that enables users to upload, store, and stream media files through an intuitive and modern web interface.
 
 ---
 
