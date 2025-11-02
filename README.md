@@ -105,7 +105,6 @@ docker-compose up
 
 The frontend can be deployed with Vercel or Netlify, and the backend on any cloud provider supporting Node.js.
 
-**Live Demo:** [play-it-tan.vercel.app](https://play-it-tan.vercel.app)
 
 ---
 
@@ -115,9 +114,6 @@ Pull requests and contributions are always welcome! Please open issues for sugge
 
 ---
 
-
-
-(Add your preferred open-source license here.)
 
 ---
 
